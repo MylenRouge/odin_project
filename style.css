@@ -1,7 +1,11 @@
 /* Here I will need to implement horizontal alignment of the website */
-*{
-    max-width: 500px;
+* {
+    max-width: auto;
+    max-height: 500px;
     margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 /* Testing selectors here */
 h1 {
@@ -9,9 +13,14 @@ h1 {
 }
 /* This one is "class" connected */
 .introduction {
-
+    font-weight: bold;
 }
 /* This one is connected to the "id" */
 #expectations {
-
+    color: red;
+    border: 2px solid;
+}
+img {
+    height: 2000px;
+    width: 1500px;
 }
