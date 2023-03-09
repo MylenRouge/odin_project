@@ -21,6 +21,18 @@ h1 {
     border: 2px solid;
 }
 img {
-    height: 2000px;
-    width: 1500px;
+    max-height: 500px;
+    margin: auto;
+}
+/* This example shows, that on small "rank" we have a selector.
+First goes id which is # in CSS. Then comes class which is period in the CSS world.
+Then goes type selectors which is written as they are like "p" from CSS to HTML is <p></p> */
+.tools_and_background,
+.the_purpose_of_the_website {
+    display: flexbox;
+    flex-direction: column;
+}
+/* This is an example of chaining selectors together into something new.*/
+.interpretation#steps_of_production {
+    align-items: center;
 }
