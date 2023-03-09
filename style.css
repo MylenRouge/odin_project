@@ -1,11 +1,35 @@
 /* Here I will need to implement horizontal alignment of the website */
 * {
     max-width: auto;
-    max-height: 500px;
+    max-height: 1000px;
     margin: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
+}
+/* Do not use divs for background as it has to be over all of other difs and would mean just BODY. Instead use img tag to implement the background later in img section here. */
+.background {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 100%;
+}
+div {
+    position: absolute;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 950px;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
 }
 /* Testing selectors here */
 h1 {
@@ -21,16 +45,23 @@ h1 {
     border: 2px solid;
 }
 img {
-    max-height: 500px;
+    max-height: auto;
     margin: auto;
 }
 /* This example shows, that on small "rank" we have a selector.
 First goes id which is # in CSS. Then comes class which is period in the CSS world.
 Then goes type selectors which is written as they are like "p" from CSS to HTML is <p></p> */
+.introduction,
 .tools_and_background,
-.the_purpose_of_the_website {
+.the_purpose_of_the_website,
+.the_purpose_of_the_website,
+.interpretation {
     display: flexbox;
-    flex-direction: column;
+    flex-direction: row;
+    height: 800px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
 }
 /* This is an example of chaining selectors together into something new.*/
 .interpretation#steps_of_production {
