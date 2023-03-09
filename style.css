@@ -1,0 +1,17 @@
+/* Here I will need to implement horizontal alignment of the website */
+*{
+    max-width: 500px;
+    margin: auto;
+}
+/* Testing selectors here */
+h1 {
+    color: white;
+}
+/* This one is "class" connected */
+.introduction {
+
+}
+/* This one is connected to the "id" */
+#expectations {
+
+}
