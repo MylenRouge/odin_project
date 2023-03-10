@@ -20,21 +20,21 @@ body {
 }
 /* Do not use divs for background as it has to be over all of other difs and would mean just BODY. Instead use img tag to implement the background later in img section here. */
 .background {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
     
 }
-#background1 {
+#background1,
+#background2,
+#background3 {
     aspect-ratio: 16/ 9;
+    border-right: 100px;
+    border-color: black;
 
 }
 div {
-    display: flex;
-    position: absolute;
-    float: right;
-    flex-direction: row;
-    padding: var(--size-3);
-    background: var(--surface-2);
-    border-radius: var(radius-2);
-    margin-right: 20px;
+    
 }
 /* Testing selectors here */
 h1 {
@@ -61,12 +61,11 @@ Then goes type selectors which is written as they are like "p" from CSS to HTML 
 .the_purpose_of_the_website,
 .the_purpose_of_the_website,
 .interpretation {
-    display: flexbox;
+    display: grid;
     flex-direction: row;
-    height: 800px;
-    text-align: center;
-    width: 100%;
-    margin: auto;
+    position: relative;
+    align-items: bottom;
+    margin-right: 20px;
 }
 /* This is an example of chaining selectors together into something new.*/
 .interpretation#steps_of_production {
