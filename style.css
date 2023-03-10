@@ -1,35 +1,40 @@
 /* Here I will need to implement horizontal alignment of the website */
 * {
     max-width: auto;
-    max-height: 1000px;
+    max-height: 950px;
     margin: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
+    scroll-snap-align: auto;
+}
+body {
+    overflow-y: hidden;
+    overscroll-behavior-y: none;
+}
+@media(max-width:768px) {
+    .background{
+        display: block;
+    }
+    
 }
 /* Do not use divs for background as it has to be over all of other difs and would mean just BODY. Instead use img tag to implement the background later in img section here. */
 .background {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: row;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    width: 100%;
+    
+}
+#background1 {
+    aspect-ratio: 16/ 9;
+
 }
 div {
+    display: flex;
     position: absolute;
     float: right;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    position: relative;
-    height: 950px;
-    text-align: center;
-    width: 50%;
-    padding: 10px;
+    padding: var(--size-3);
+    background: var(--surface-2);
+    border-radius: var(radius-2);
+    margin-right: 20px;
 }
 /* Testing selectors here */
 h1 {
