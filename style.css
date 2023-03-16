@@ -1,36 +1,42 @@
 /* Here I will need to implement horizontal alignment of the website */
-* {
-    max-width: auto;
-    max-height: 950px;
-    margin: auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    scroll-snap-align: auto;
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
 }
 body {
-    overflow-y: hidden;
-    overscroll-behavior-y: none;
+    display: block;
+    margin: 8px;
+}
+html {
+    overflow-y: scroll;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 @media(max-width:768px) {
     .background{
-        display: block;
+        
     }
     
 }
 /* Do not use divs for background as it has to be over all of other difs and would mean just BODY. Instead use img tag to implement the background later in img section here. */
-.background {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
+.background-scroll {
+    display: inline-block;
+    vertical-align: top;
+    overflow: visible;
+    position: relative;
+    background-color: rgb(71, 63, 63);
+    width: auto;
+    height: 100%;
+    z-index: 2;
     
 }
 #background1,
 #background2,
 #background3 {
     aspect-ratio: 16/ 9;
-    border-right: 100px;
-    border-color: black;
+    border-left: 50px;
+    border-color: grey;
+    padding-right: 100px;
 
 }
 div {
@@ -55,19 +61,38 @@ img {
 }
 /* This example shows, that on small "rank" we have a selector.
 First goes id which is # in CSS. Then comes class which is period in the CSS world.
-Then goes type selectors which is written as they are like "p" from CSS to HTML is <p></p> */
+Then goes type selectors which is written as they are like "p" from CSS to HTML is <p></p> */    
 .introduction,
 .tools_and_background,
 .the_purpose_of_the_website,
-.the_purpose_of_the_website,
 .interpretation {
-    display: grid;
-    flex-direction: row;
-    position: relative;
-    align-items: bottom;
-    margin-right: 20px;
+    
+    white-space: nowrap;
+    
 }
 /* This is an example of chaining selectors together into something new.*/
 .interpretation#steps_of_production {
     align-items: center;
+}
+.introduction {
+    display: inline-flex;
+    flex-direction: row;
+    position: fixed;
+    max-height: 1080px;
+    height: 700px;
+    top: 0px;
+    width: auto;
+    margin-left: 20px;
+}
+.tools_and_background {
+    display: -ms-inline-grid;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: wrap;
+    position: absolute;
+    float: left;
+    align-items: center;
+    height: 700px;
+    max-height: 1080px;
+    width: 1500px;
 }
